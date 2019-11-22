@@ -20,6 +20,27 @@ function wppc_settings_init() {
 		'',                                    // callback function
 		'wppc-settings'                        // page
     );
+ 
+    // Button text
+    register_setting(
+		'wppc-settings',                       // option group
+        'button-text',                         // option name
+        ''                                     // args
+    );
+    add_settings_field(
+		'button-text',                         // id
+		__('Button text', 'wp-post-cards'),    // title
+		'wppc_form_button_text',               // callback function
+		'wppc-settings',                       // page
+        'wppc-settings-section',               // section
+        ''                                     // args
+    );
+}
+
+function wppc_form_button_text() {
+    $buttonText = esc_attr(get_option('button-text', '')); ?>
+    <input class="wppc-input" type="text" name="button-text" placeholder="Read article" value="<?php echo $buttonText; ?>" />
+    <?php
 }
 
 function wppc_settings_page() {
