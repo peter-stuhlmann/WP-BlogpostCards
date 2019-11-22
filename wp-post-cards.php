@@ -34,13 +34,19 @@ function wppc_display_post_cards($atts, $content = NULL) {
     $postCardThumbnail = $thumbnailUrl;
   }
 
+  if ( esc_attr(get_option('button-text', '')) == '' ) {
+    $buttonText = 'Read article';
+  } else {
+    $buttonText = esc_attr(get_option('button-text', ''));
+  }
+
   $output .= '
     <div class="wppc-card">
       <div class="wppc-card-image" style="background-image: url(' . $postCardThumbnail . ')"></div>
       <div class="wppc-card-content">
         <h3>' . get_the_title() . '</h3>
         <p>' . get_the_excerpt() . '</p>
-        <a class="wppc-button" href="' . get_permalink() . '">Read Article</a>
+        <a class="wppc-button" href="' . get_permalink() . '">' . $buttonText . '</a>
       </div>
     </div>
   ';
@@ -51,3 +57,6 @@ function wppc_display_post_cards($atts, $content = NULL) {
 }
           
 add_shortcode('wppc', 'wppc_display_post_cards');
+
+// settings
+include (plugin_dir_path( __FILE__ ) . '/includes/settings.php');
