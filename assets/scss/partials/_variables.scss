@@ -1,0 +1,15 @@
+// color variables
+$primaryColor: #fff;
+//$secondaryColor: #454545;
+$secondaryColor: red;
+
+// card
+$cardBackground: $primaryColor;
+$cardBorder: darken($primaryColor, 15%);
+
+// paragraph
+$fontColor: $secondaryColor;
+
+// button
+$buttonColor: $secondaryColor;
+$buttonFontColor: $primaryColor;

@@ -4,8 +4,9 @@
 
 .wppc-card {
   flex: 0 0 31%;
-  border: 1px solid #efefef;
+  border: 1px solid #d9d9d9;
   margin: 15px 1.1666%;
+  background-color: #fff;
   box-shadow: 2px 6px 25px rgba(0, 0, 0, 0.1);
   position: relative; }
   .wppc-card .wppc-card-image {
@@ -17,24 +18,25 @@
     padding: 30px 30px 110px; }
     .wppc-card .wppc-card-content h3 {
       margin: 0 0 25px 0;
-      line-height: 1.2; }
+      line-height: 1.2;
+      color: red; }
     .wppc-card .wppc-card-content p {
       margin: 0 0 30px;
-      color: #454545; }
+      color: red; }
 
 .wppc-button {
   display: block;
-  background: #454545;
-  border: 1px solid #454545;
+  background: red;
+  border: 1px solid red;
   padding: 10px 15px;
-  color: white;
+  color: #fff;
   text-decoration: none;
   text-align: center; }
   .wppc-button:hover, .wppc-button:focus {
-    background: #2c2c2c;
-    border: 1px solid #2c2c2c; }
+    background: #cc0000;
+    border: 1px solid #cc0000; }
   .wppc-button a {
-    color: #454545;
+    color: red;
     text-decoration: none;
     transition: all 0.3s ease; }
 
