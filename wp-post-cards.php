@@ -26,8 +26,14 @@ function wppc_display_post_cards($atts, $content = NULL) {
   $query = new WP_Query( $atts );
   $output = '<div class="wppc-container">';
   while($query->have_posts()) : $query->the_post();
-  $postCardThumbnail = wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'full') );
-      
+
+  $thumbnailUrl = wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'full') );
+  if ( $thumbnailUrl == '' ) {
+    $postCardThumbnail = '<Default image url>';
+  } else {
+    $postCardThumbnail = $thumbnailUrl;
+  }
+
   $output .= '
     <div class="wppc-card">
       <div class="wppc-card-image" style="background-image: url(' . $postCardThumbnail . ')"></div>
