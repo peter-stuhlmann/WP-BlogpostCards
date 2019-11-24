@@ -15,10 +15,15 @@ function wp_post_cards_enqueue_scripts() {
 add_action( 'wp_enqueue_scripts', 'wp_post_cards_enqueue_scripts' );
 
 
-// Display recent blogposts
+// Display blogposts
 function wppc_display_post_cards($atts, $content = NULL) {
   $atts = shortcode_atts(
-    [ 'orderby' => 'date' ], 
+    [ 
+      'orderby' => 'date', 
+      'posts_per_page' => '-1',
+      'category_name' => '',
+      'tag' => ''
+    ], 
     $atts, 
     'wp-post-cards' 
   );
