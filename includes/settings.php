@@ -60,7 +60,7 @@ function wppc_form_button_text() {
 
 function wppc_form_default_thumbnail() {
     $defaultThumbnail = esc_attr(get_option('default-thumbnail', '')); ?>
-    <input class="wppc-url-input" type="url" name="default-thumbnail" placeholder="xxx" value="<?php echo $defaultThumbnail; ?>" />
+    <input class="wppc-url-input" type="url" name="default-thumbnail" placeholder="Enter an image url" value="<?php echo $defaultThumbnail; ?>" />
     <?php
 }
 
