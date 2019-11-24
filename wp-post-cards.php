@@ -8,12 +8,17 @@
  */
 
 
-// Stylesheet
+// Stylesheet Frontend
 function wp_post_cards_enqueue_scripts() {
-  wp_enqueue_style( 'wp-post-cards-styles', plugin_dir_url( __FILE__ ) . "/assets/css/style.css", '', '20191119');
+  wp_enqueue_style( 'wp-post-cards-styles', plugin_dir_url( __FILE__ ) . "/assets/css/style.css", '', '20191124');
 }
 add_action( 'wp_enqueue_scripts', 'wp_post_cards_enqueue_scripts' );
 
+// Stylesheet Backend
+function wp_post_cards_admin_styles() {
+  wp_enqueue_style( 'wp-post-cards-admin-styles', plugin_dir_url( __FILE__ ) . "/assets/css/admin-styles.css", '', '20191124');
+}
+add_action( 'admin_enqueue_scripts', 'wp_post_cards_admin_styles' );
 
 // Display blogposts
 function wppc_display_post_cards($atts, $content = NULL) {
@@ -34,7 +39,7 @@ function wppc_display_post_cards($atts, $content = NULL) {
 
   $thumbnailUrl = wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'full') );
   if ( $thumbnailUrl == '' ) {
-    $postCardThumbnail = '<Default image url>';
+    $postCardThumbnail = esc_attr(get_option('default-thumbnail', ''));
   } else {
     $postCardThumbnail = $thumbnailUrl;
   }
