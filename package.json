@@ -1,0 +1,21 @@
+{
+  "name": "wp-post-cards",
+  "version": "1.0.0",
+  "scripts": {
+    "build:styles": "node-sass --watch --recursive --follow --output assets/css/style.css --source-map true --source-map-contents assets/css/style.scss",
+    "build:admin-styles": "node-sass --watch --recursive --follow --output assets/css/ --source-map true --source-map-contents assets/scss/admin-styles.scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peter-stuhlmann/WP-BlogpostCards.git"
+  },
+  "author": "Peter R. Stuhlmann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peter-stuhlmann/WP-BlogpostCards/issues"
+  },
+  "homepage": "https://github.com/peter-stuhlmann/WP-BlogpostCards#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
