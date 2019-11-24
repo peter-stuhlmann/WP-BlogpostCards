@@ -58,6 +58,7 @@ function wppc_settings_page() {
                 null                           // other attributes
             )?>
         </form>
+        <p><em><?php _e('Support the development of this and other web projects with <a href="https://paypal.me/PRStuhlmann/2">your donation</a>.', 'wp-post-cards'); ?></em></p>
     </div>
 <?php
 }
