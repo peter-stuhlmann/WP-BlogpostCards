@@ -1,6 +1,7 @@
 .wppc-container {
   display: flex;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+}
 
 .wppc-card {
   flex: 0 0 31%;
@@ -8,36 +9,45 @@
   margin: 15px 1.1666%;
   background-color: #fff;
   box-shadow: 2px 6px 25px rgba(0, 0, 0, 0.1);
-  position: relative; }
-  .wppc-card .wppc-card-image {
-    height: 200px;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat; }
-  .wppc-card .wppc-card-content {
-    padding: 30px 30px 110px; }
-    .wppc-card .wppc-card-content h3 {
-      margin: 0 0 25px 0;
-      line-height: 1.2;
-      color: red; }
-    .wppc-card .wppc-card-content p {
-      margin: 0 0 30px;
-      color: red; }
+  position: relative;
+}
+.wppc-card .wppc-card-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.wppc-card .wppc-card-content {
+  padding: 30px 30px 50px 30px;
+}
+.wppc-card .wppc-card-content h3 {
+  margin: 0 0 25px 0;
+  line-height: 1.2;
+  color: #454545;
+}
+.wppc-card .wppc-card-content p {
+  margin: 0 0 30px;
+  color: #454545;
+}
 
 .wppc-button {
   display: block;
-  background: red;
-  border: 1px solid red;
+  background: #454545;
+  border: 1px solid #454545;
   padding: 10px 15px;
   color: #fff;
   text-decoration: none;
-  text-align: center; }
-  .wppc-button:hover, .wppc-button:focus {
-    background: #cc0000;
-    border: 1px solid #cc0000; }
-  .wppc-button a {
-    color: red;
-    text-decoration: none;
-    transition: all 0.3s ease; }
+  text-align: center;
+}
+.wppc-button:hover,
+.wppc-button:focus {
+  background: #2c2c2c;
+  border: 1px solid #2c2c2c;
+}
+.wppc-button a {
+  color: #454545;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
 
 /*# sourceMappingURL=style.css.map */
