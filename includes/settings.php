@@ -35,11 +35,32 @@ function wppc_settings_init() {
         'wppc-settings-section',               // section
         ''                                     // args
     );
+
+    // default thumbnail
+    register_setting(
+		'wppc-settings',                       // option group
+        'default-thumbnail',                   // option name
+        ''                                     // args
+    );
+    add_settings_field(
+		'default-thumbnail',                   // id
+		__('Default thumbnail', 'wp-post-cards'), // title
+		'wppc_form_default_thumbnail',         // callback function
+		'wppc-settings',                       // page
+        'wppc-settings-section',               // section
+        ''                                     // args
+    );
 }
 
 function wppc_form_button_text() {
     $buttonText = esc_attr(get_option('button-text', '')); ?>
-    <input class="wppc-input" type="text" name="button-text" placeholder="Read article" value="<?php echo $buttonText; ?>" />
+    <input class="wppc-text-input" type="text" name="button-text" placeholder="Read article" value="<?php echo $buttonText; ?>" />
+    <?php
+}
+
+function wppc_form_default_thumbnail() {
+    $defaultThumbnail = esc_attr(get_option('default-thumbnail', '')); ?>
+    <input class="wppc-url-input" type="url" name="default-thumbnail" placeholder="xxx" value="<?php echo $defaultThumbnail; ?>" />
     <?php
 }
 
