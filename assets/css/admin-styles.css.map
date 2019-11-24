@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "admin-styles.css",
+	"sources": [
+		"../scss/admin-styles.scss"
+	],
+	"sourcesContent": [
+		".wppc-text-input {\r\n  width: 350px;\r\n  padding: 3px 5px;\r\n  box-sizing: border-box;\r\n}\r\n\r\n.wppc-url-input {\r\n  width: 100%;\r\n}\r\n"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,gBAAgB,CAAC;EACf,KAAK,EAAE,KAAK;EACZ,OAAO,EAAE,OAAO;EAChB,UAAU,EAAE,UAAU,GACvB;;AAED,AAAA,eAAe,CAAC;EACd,KAAK,EAAE,IAAI,GACZ"
+}
