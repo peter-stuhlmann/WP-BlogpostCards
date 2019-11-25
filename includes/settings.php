@@ -65,9 +65,11 @@ function wppc_form_default_thumbnail() {
 }
 
 function wppc_settings_page() {
+    $current_user = wp_get_current_user();
     ?>
     <div class="wrap">
         <h1><?php _e('WP Post Cards Settings', 'wp-post-cards'); ?></h1>
+        <p><?php _e("Hi {$current_user->display_name}! Here you can configure WP Post Cards.", 'wp-post-cards'); ?></p>
         <form method="POST" action="options.php">
             <?php settings_fields('wppc-settings');?>
             <?php do_settings_sections('wppc-settings')?>
